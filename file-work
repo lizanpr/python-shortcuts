@@ -1,23 +1,23 @@
-# Open file file.txt in read-only mode using with and assign it to file object f; with will take care of closing the file
-# Then using a compact loop, read each line in the file to a list, striping trailing spaces or characters such as n\
+# OPEN FILE FILE.TXT IN READ-ONLY MODE USING WITH AND ASSIGN IT TO FILE OBJECT F; WITH WILL TAKE CARE OF CLOSING THE FILE
+# THEN USING A COMPACT LOOP, READ EACH LINE IN THE FILE TO A LIST, STRIPING TRAILING SPACES OR CHARACTERS SUCH AS N\
 
 with open('file.txt') as f:
     list = [line.strip() for line in f]
     
-# Here is a longer version with the same results
+# HERE IS A LONGER VERSION WITH THE SAME RESULTS
 
 with open('file.txt') as f:
     list = []
     for line in f:
           list.append(line.strip())
 
-# Check if a file exists (function returns True or False), and if it does, remove it
+# CHECK IF A FILE EXISTS (FUNCTION RETURNS TRUE OR FALSE), AND IF IT DOES, REMOVE IT
 
 import os
 if os.path.exists("C:\file.txt"):
     os.remove('C:\file.txt')
     
-# Open a file in read-only mode, read and print the contents, then close the file
+# OPEN A FILE IN READ-ONLY MODE, READ AND PRINT THE CONTENTS, THEN CLOSE THE FILE
 
 file = open('file.txt')
 contents = file.read()
