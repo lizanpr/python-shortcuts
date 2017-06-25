@@ -2,11 +2,33 @@
 # Then restore sys.stdout and print the contents of the file
 
 import sys
+
 f = open('file.txt', 'w')
+
 old_stdout = sys.stdout
+sys.stdout = f
+
 print "Hello there world!"
+
 f.close()
+
 sys.stdout = old_stdout
+
 f = open('file.txt')
 content = f.read()
 print content
+
+# This is a little class for capturing output to both a file and terminal
+
+import sys
+
+class Logger(object):
+    def __init__(self):
+        self.terminal = sys.stdout
+        self.log = open("logfile.log", "a")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message) 
+
+sys.stdout = Logger()
