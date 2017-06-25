@@ -1,4 +1,4 @@
-# Open file file.txt using with and assign it to file object f; with will take care of closing the file
+# Open file file.txt in read-only mode using with and assign it to file object f; with will take care of closing the file
 # Then using a compact loop, read each line in the file to a list, striping trailing spaces or characters such as n\
 
 with open('file.txt') as f:
@@ -10,3 +10,16 @@ with open('file.txt') as f:
     list = []
     for line in f:
           list.append(line.strip())
+
+# Check if a file exists (function returns True or False, and if it does, remove it
+
+import os
+if os.path.exists("C:\file.txt"):
+    os.remove('C:\file.txt')
+    
+# Open a file in read-only mode, read and print the contents, then close the file
+
+file = open('file.txt')
+contents = file.read()
+print contents
+file.close()
