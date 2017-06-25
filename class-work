@@ -1,3 +1,5 @@
+# THIS IS A LITTLE CLASS FOR CAPTURING OUTPUT TO BOTH A FILE AND TERMINAL
+
 import sys
 
 class Logger(object):
