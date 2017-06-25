@@ -11,7 +11,7 @@ with open('file.txt') as f:
     for line in f:
           list.append(line.strip())
 
-# Check if a file exists (function returns True or False, and if it does, remove it
+# Check if a file exists (function returns True or False), and if it does, remove it
 
 import os
 if os.path.exists("C:\file.txt"):
