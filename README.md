@@ -1,2 +1,2 @@
 # python-shortcuts
-Shot Python how-to per category
+Short Python how-to per category
