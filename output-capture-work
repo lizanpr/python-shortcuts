@@ -1,0 +1,12 @@
+# Capture standard output to file f with no echo to screen, but make a backup of sys.stdout first
+# Then restore sys.stdout and print the contents of the file
+
+import sys
+f = open('file.txt', 'w')
+old_stdout = sys.stdout
+print "Hello there world!"
+f.close()
+sys.stdout = old_stdout
+f = open('file.txt')
+content = f.read()
+print content
