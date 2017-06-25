@@ -1,5 +1,5 @@
-# Capture standard output to file f with no echo to screen, but make a backup of sys.stdout first
-# Then restore sys.stdout and print the contents of the file
+# CAPTURE STANDARD OUTPUT TO FILE F WITH NO ECHO TO SCREEN, BUT MAKE A BACKUP OF SYS.STDOUT FIRST
+# THEN RESTORE SYS.STDOUT AND PRINT THE CONTENTS OF THE FILE
 
 import sys
 
@@ -18,7 +18,7 @@ f = open('file.txt')
 content = f.read()
 print content
 
-# This is a little class for capturing output to both a file and terminal
+# THIS IS A LITTLE CLASS FOR CAPTURING OUTPUT TO BOTH A FILE AND TERMINAL
 
 import sys
 
